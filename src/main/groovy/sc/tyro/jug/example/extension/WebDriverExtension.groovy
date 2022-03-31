@@ -1,4 +1,4 @@
-package sc.tyro.jug.example
+package sc.tyro.jug.example.extension
 
 import io.github.bonigarcia.wdm.WebDriverManager
 import io.javalin.Javalin
@@ -26,7 +26,7 @@ class WebDriverExtension implements BeforeAllCallback, AfterAllCallback {
         DatagramSocket socket = new DatagramSocket()
         socket.connect(getByName("8.8.8.8"), 10002)
         String host_ip = socket.localAddress.hostAddress
-        BASE_URL = "http://${host_ip}:${app.port()}/"
+        BASE_URL = "http://${host_ip}:${app.port()}"
 
         wdm = chromedriver()
 //                .browserVersion('48')

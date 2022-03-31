@@ -1,10 +1,10 @@
-package sc.tyro.jug.example
+package sc.tyro.jug.example.extension
 
 import org.junit.jupiter.api.extension.BeforeAllCallback
 import org.junit.jupiter.api.extension.ExtensionContext
 import sc.tyro.web.WebBundle
 
-import static sc.tyro.jug.example.WebDriverExtension.webdriver
+import static WebDriverExtension.webdriver
 
 class TyroExtension implements BeforeAllCallback {
     @Override
