@@ -15,6 +15,7 @@ import static org.hamcrest.Matchers.*
 import static org.openqa.selenium.By.cssSelector
 import static org.openqa.selenium.By.id
 import static org.openqa.selenium.By.xpath
+import static sc.tyro.jug.example.WebDriverExtension.BASE_URL
 import static sc.tyro.jug.example.WebDriverExtension.webdriver
 
 @ExtendWith([WebDriverExtension, TyroExtension])
@@ -26,7 +27,7 @@ class ExampleTest {
 
     @Test
     void sample_2() {
-        webdriver.get('https://tyro-sc.github.io/tyro-starters')
+        webdriver.get(BASE_URL)
 
         WebElement email = webdriver.findElement(id('email'))
         assertThat(email.isDisplayed(), is(true))
